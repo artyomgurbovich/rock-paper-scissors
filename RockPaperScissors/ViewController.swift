@@ -113,13 +113,11 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare")
         let gameStatsViewController = segue.destination as! GameStatsViewController
         gameStatsViewController.gameStatsText = "Games: \(games)\nWins: \(wins)\nLosses: \(losses)\nDraws: \(draws)\n"
     }
     
     @IBAction func gameStatsTapped(_ sender: UIButton) {
-        print("tapped")
         performSegue(withIdentifier: "segueIdentifier", sender: self)
     }
 }
