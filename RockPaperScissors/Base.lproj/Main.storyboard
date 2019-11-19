@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,213 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CmR-1c-G13">
+                                <rect key="frame" x="27.5" y="157.5" width="320" height="262"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1H-lq-uAt">
+                                        <rect key="frame" x="127.5" y="0.0" width="65" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock, Paper, Scissors?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyT-4V-pOT">
+                                        <rect key="frame" x="22" y="102" width="276" height="40"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="28"/>
+                                        <color key="textColor" red="0.39927596830985912" green="0.39927596830985912" blue="0.39927596830985912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ATb-Lq-1YN">
+                                        <rect key="frame" x="0.0" y="172" width="320" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m8-SL-tKX">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="1" green="0.7482232955" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="4rQ-Gl-2Ph"/>
+                                                    <constraint firstAttribute="width" constant="90" id="qQ8-Oy-nmP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="👊"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="rockSignTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0es-eb-FSF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbg-ic-4U1">
+                                                <rect key="frame" x="115" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="1" green="0.74822329546138711" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="EN0-U7-Nmm"/>
+                                                    <constraint firstAttribute="width" constant="90" id="cik-8N-Z5j"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="✋"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="paperSignTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHv-7L-XOY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-la-Voa">
+                                                <rect key="frame" x="230" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="1" green="0.7482232955" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="AKd-c1-9wB"/>
+                                                    <constraint firstAttribute="width" constant="90" id="PyG-xI-fJl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="✌️"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="scissorsSignTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gLi-6R-0OX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syd-9X-dtb">
+                                <rect key="frame" x="87.5" y="587" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="9HW-gr-MeD"/>
+                                    <constraint firstAttribute="height" constant="50" id="smh-fh-AzB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
+                                <size key="titleShadowOffset" width="3" height="3"/>
+                                <state key="normal" title="Game Stats">
+                                    <color key="titleColor" red="0.39927596830000001" green="0.39927596830000001" blue="0.39927596830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="gameStatsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQM-GZ-Sil"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzy-cy-XfR">
+                                <rect key="frame" x="87.5" y="449.5" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Dhl-km-fKX"/>
+                                    <constraint firstAttribute="height" constant="50" id="EcC-Aa-mI4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.39927596830000001" green="0.39927596830000001" blue="0.39927596830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playAgainTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rko-9O-5i6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="syd-9X-dtb" secondAttribute="bottom" constant="30" id="CQ5-fa-8Ie"/>
+                            <constraint firstItem="bzy-cy-XfR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3Y-cE-hA2"/>
+                            <constraint firstItem="syd-9X-dtb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ici-CH-o99"/>
+                            <constraint firstItem="bzy-cy-XfR" firstAttribute="top" secondItem="CmR-1c-G13" secondAttribute="bottom" constant="30" id="Ngt-mK-cXk"/>
+                            <constraint firstItem="CmR-1c-G13" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-45" id="VZw-S6-mb7"/>
+                            <constraint firstItem="CmR-1c-G13" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ya3-z3-fYS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vou-zx-Y9I"/>
+                    <connections>
+                        <outlet property="appSignLabel" destination="P1H-lq-uAt" id="P5a-gQ-AZW"/>
+                        <outlet property="gameStatsButton" destination="syd-9X-dtb" id="wxd-3e-w77"/>
+                        <outlet property="gameStatusLabel" destination="WyT-4V-pOT" id="abA-9m-2Yr"/>
+                        <outlet property="paperSignButton" destination="qbg-ic-4U1" id="Je5-SV-mwT"/>
+                        <outlet property="playAgainButton" destination="bzy-cy-XfR" id="TvG-nA-3pH"/>
+                        <outlet property="rockSignButton" destination="5m8-SL-tKX" id="gm0-uj-lPf"/>
+                        <outlet property="scissorsSignButton" destination="b6j-la-Voa" id="ze7-xZ-mNB"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="QNQ-xK-hSA"/>
+                        <segue destination="pkU-1J-YX8" kind="show" identifier="segueIdentifier" id="kBl-nr-Cpu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Game Stats View Controller-->
+        <scene sceneID="IVz-DJ-yOH">
+            <objects>
+                <viewController id="pkU-1J-YX8" customClass="GameStatsViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qkx-vs-2RU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hm-8L-X3E">
+                                <rect key="frame" x="121" y="232.5" width="133" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="182" id="pRC-Sj-kg9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="133" id="pzU-AD-6u3"/>
+                                </constraints>
+                                <string key="text">Games: 0 Wins: 0
+Losses: 0 Draws: 0</string>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="32"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWJ-Vf-W7s">
+                                <rect key="frame" x="87.5" y="567" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.60462918133802812" green="0.60462918133802812" blue="0.60462918133802812" alpha="0.25385123239436619" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h6I-oR-xuZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="yb7-dL-0Uu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.39927596830000001" green="0.39927596830000001" blue="0.39927596830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backTapped:" destination="pkU-1J-YX8" eventType="touchUpInside" id="aRE-a7-jJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Hm-8L-X3E" firstAttribute="centerY" secondItem="Qkx-vs-2RU" secondAttribute="centerY" id="7qn-Nd-hhA"/>
+                            <constraint firstItem="mWJ-Vf-W7s" firstAttribute="centerX" secondItem="Qkx-vs-2RU" secondAttribute="centerX" id="Y2x-1X-kU6"/>
+                            <constraint firstItem="8Hm-8L-X3E" firstAttribute="centerX" secondItem="Qkx-vs-2RU" secondAttribute="centerX" id="dWA-sZ-o6y"/>
+                            <constraint firstItem="xLN-ei-SV8" firstAttribute="bottom" secondItem="mWJ-Vf-W7s" secondAttribute="bottom" constant="30" id="uxM-XQ-8us"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xLN-ei-SV8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sCe-SN-VKY"/>
+                    <connections>
+                        <outlet property="gameStatsLabel" destination="8Hm-8L-X3E" id="fQb-Uz-GrY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yD-Xm-uo7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="137"/>
         </scene>
     </scenes>
 </document>

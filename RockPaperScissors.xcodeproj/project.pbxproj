@@ -13,6 +13,9 @@
 		9A22D325236F8E2D000C03BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D323236F8E2D000C03BB /* Main.storyboard */; };
 		9A22D327236F8E2D000C03BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D326236F8E2D000C03BB /* Assets.xcassets */; };
 		9A22D32A236F8E2D000C03BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D328236F8E2D000C03BB /* LaunchScreen.storyboard */; };
+		9A22D332236F9139000C03BB /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D331236F9139000C03BB /* Sign.swift */; };
+		9A22D334236F9504000C03BB /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D333236F9504000C03BB /* GameState.swift */; };
+		9A8FB2FE237746AE00CF93C8 /* GameStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB2FD237746AE00CF93C8 /* GameStatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9A22D326236F8E2D000C03BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A22D329236F8E2D000C03BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A22D32B236F8E2D000C03BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A22D331236F9139000C03BB /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
+		9A22D333236F9504000C03BB /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		9A8FB2FD237746AE00CF93C8 /* GameStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				9A22D326236F8E2D000C03BB /* Assets.xcassets */,
 				9A22D328236F8E2D000C03BB /* LaunchScreen.storyboard */,
 				9A22D32B236F8E2D000C03BB /* Info.plist */,
+				9A22D331236F9139000C03BB /* Sign.swift */,
+				9A22D333236F9504000C03BB /* GameState.swift */,
+				9A8FB2FD237746AE00CF93C8 /* GameStatsViewController.swift */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 			files = (
 				9A22D322236F8E2D000C03BB /* ViewController.swift in Sources */,
 				9A22D31E236F8E2D000C03BB /* AppDelegate.swift in Sources */,
+				9A22D334236F9504000C03BB /* GameState.swift in Sources */,
+				9A22D332236F9139000C03BB /* Sign.swift in Sources */,
+				9A8FB2FE237746AE00CF93C8 /* GameStatsViewController.swift in Sources */,
 				9A22D320236F8E2D000C03BB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Artyom-Gurbovich.RockPaperScissors";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RockPaperScissors;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -308,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Artyom-Gurbovich.RockPaperScissors";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RockPaperScissors;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
